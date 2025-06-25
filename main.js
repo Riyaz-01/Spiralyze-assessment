@@ -12,7 +12,6 @@ const toggleNavbar = (e) => {
 };
 btn.addEventListener('click', toggleNavbar);
 document.body.addEventListener('click', () => {
-	console.log('bod');
 	if (navbar.style.maxHeight === height) navbar.style.maxHeight = '0';
 });
 
@@ -240,12 +239,13 @@ window.addEventListener('load', function () {
 		document.querySelectorAll('.form input')
 	);
 	const select = document.querySelector('.drop-row select');
+	formInputs.push(select);
 	formInputs.forEach(function (input) {
 		input.value = '';
 	});
 
 	// Add focusout event listeners to all form inputs
-	formInputs.push(select);
+
 	formInputs.forEach(function (input) {
 		input.addEventListener('change', function () {
 			if (this.value !== '') {

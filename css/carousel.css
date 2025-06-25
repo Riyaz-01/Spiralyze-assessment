@@ -163,6 +163,11 @@
 						border-radius: 8px;
 						padding-top: 146px;
 						padding-bottom: 72px;
+						.quote {
+							width: 40px;
+							top: 73px;
+							right: 36px;
+						}
 					}
 				}
 			}
