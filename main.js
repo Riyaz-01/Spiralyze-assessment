@@ -241,6 +241,13 @@ window.addEventListener('load', function () {
 	// Add focusout event listeners to all form inputs
 	formInputs.push(select);
 	formInputs.forEach(function (input) {
+		input.addEventListener('change', function () {
+			if (this.value !== '') {
+				this.classList.add('focus');
+			} else {
+				this.classList.remove('focus');
+			}
+		});
 		input.addEventListener('focusout', function () {
 			if (this.value !== '') {
 				this.classList.add('focus');
