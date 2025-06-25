@@ -1,406 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>| Home</title>
 
-		<!--stylesheet-->
-		<link href="css/theme.css" rel="stylesheet" type="text/css" />
-		<link href="css/hero.css" rel="stylesheet" type="text/css" />
-		<link href="css/about.css" rel="stylesheet" type="text/css" />
-		<link href="css/carousel.css" rel="stylesheet" type="text/css" />
-		<link href="css/organize.css" rel="stylesheet" type="text/css" />
-		<link href="css/video-section.css" rel="stylesheet" type="text/css" />
-		<link href="css/footer.css" rel="stylesheet" type="text/css" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>| Home</title>
 
-		<!--FONT-->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!--font-family: 'Montserrat', sans-serif;-->
-	</head>
+    <!--stylesheet-->
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/hero.css" rel="stylesheet" type="text/css" />
+    <link href="css/about.css" rel="stylesheet" type="text/css" />
+    <link href="css/carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/organize.css" rel="stylesheet" type="text/css" />
+    <link href="css/video-section.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
 
-	<body>
-		<section id="hero">
-			<div id="navbar" class="inner-container">
-				<div id="logo">
-					<a href="#">
-						<img id="logo-image" src="img/logo.svg" />
-					</a>
-				</div>
-				<div class="nav-opener show-mobile">
-					<img src="img/icon/nav.svg" />
-				</div>
-				<ul id="nav-items">
-					<li class="active"><a href="#">HOME</a></li>
-					<li><a href="#">ABOUT</a></li>
-					<li><a href="#">CONTACT</a></li>
-					<li class="contact">
-						CALL NOW FOR A CONSULT <span> 123.456.7890 </span>
-					</li>
-				</ul>
-			</div>
-			<div id="form-box" class="inner-container">
-				<div class="txt">
-					<!-- 
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!--font-family: 'Montserrat', sans-serif;-->
+</head>
+
+<body>
+    <section id="hero">
+        <div id="navbar" class="inner-container">
+            <div id="logo">
+                <a href="#">
+                    <img id="logo-image" src="img/logo.svg" />
+                </a>
+            </div>
+            <div class="nav-opener show-mobile">
+                <img src="img/icon/nav.svg" />
+            </div>
+            <ul id="nav-items">
+                <li class="active"><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li class="contact">
+                    CALL NOW FOR A CONSULT <span> 123.456.7890 </span>
+                </li>
+            </ul>
+        </div>
+        <div id="form-box" class="inner-container">
+            <div class="txt">
+                <!-- 
                 using svgs instead of text for better brower compatibility
                 (as stroke-width CSS property is only supported on chrome)
                 -->
-					<img
-						src="./img/h1-pc.svg"
-						alt="GET AN INTERVENTION"
-						class="show-pc"
-					/>
-					<img
-						src="./img/h1-tab.svg"
-						alt="GET AN INTERVENTION"
-						class="show-tab"
-					/>
-					<img
-						src="./img/h1-mob.svg"
-						alt="GET AN INTERVENTION"
-						class="show-mobile"
-					/>
-					<p>
-						Showing greater respect to older adults can be done in several ways
-						: acknowledging and putting to use the talents and skills of older
-						adults; creating intergenerational initiatives; and allowing older
-						adults to stay active and independent for as long as possible.
-					</p>
-				</div>
-				<div class="form">
-					<h2>Contact Us</h2>
-					<div class="inp-row">
-						<div class="inp-box">
-							<input class="inp" id="f-name" type="text" />
-							<label for="f-name"><span>First Name</span></label>
-							<div class="empty-tooltip">
-								<p>This field can't be empty. Please fill it in.</p>
-							</div>
-						</div>
-						<div class="inp-box">
-							<input class="inp" id="l-name" type="text" />
-							<label for="l-name"><span>Last Name</span></label>
-							<div class="empty-tooltip">
-								<p>This field can't be empty. Please fill it in.</p>
-							</div>
-						</div>
-					</div>
-					<div class="inp-row">
-						<div class="inp-box">
-							<input class="inp" id="b-name" type="text" />
-							<label for="b-name"><span>Business Email</span></label>
-							<div class="empty-tooltip">
-								<p>This field can't be empty. Please fill it in.</p>
-							</div>
-						</div>
-						<div class="inp-box">
-							<input class="inp" id="c-name" type="text" />
-							<label for="c-name"><span>Company</span></label>
-							<div class="empty-tooltip">
-								<p>This field can't be empty. Please fill it in.</p>
-							</div>
-						</div>
-					</div>
-					<div class="drop-row">
-						<select onchange="myFunction()" id="country" class="inp sel">
+                <img src="./img/h1-pc.svg" alt="GET AN INTERVENTION" class="show-pc" />
+                <img src="./img/h1-tab.svg" alt="GET AN INTERVENTION" class="show-tab" />
+                <img src="./img/h1-mob.svg" alt="GET AN INTERVENTION" class="show-mobile" />
+                <p>
+                    Showing greater respect to older adults can be done in several ways : acknowledging and putting to use the talents and skills of older adults; creating intergenerational initiatives; and allowing older adults to stay active and independent for as long
+                    as possible.
+                </p>
+            </div>
+            <div class="form">
+                <h2>Contact Us</h2>
+                <div class="inp-row">
+                    <div class="inp-box">
+                        <input class="inp" id="f-name" type="text" />
+                        <label for="f-name"><span>First Name</span></label>
+                        <div class="empty-tooltip">
+                            <p>This field can't be empty. Please fill it in.</p>
+                        </div>
+                    </div>
+                    <div class="inp-box">
+                        <input class="inp" id="l-name" type="text" />
+                        <label for="l-name"><span>Last Name</span></label>
+                        <div class="empty-tooltip">
+                            <p>This field can't be empty. Please fill it in.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inp-row">
+                    <div class="inp-box">
+                        <input class="inp" id="b-name" type="text" />
+                        <label for="b-name"><span>Business Email</span></label>
+                        <div class="empty-tooltip">
+                            <p>This field can't be empty. Please fill it in.</p>
+                        </div>
+                    </div>
+                    <div class="inp-box">
+                        <input class="inp" id="c-name" type="text" />
+                        <label for="c-name"><span>Company</span></label>
+                        <div class="empty-tooltip">
+                            <p>This field can't be empty. Please fill it in.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="drop-row">
+                    <select onchange="myFunction()" id="country" class="inp sel">
 							<option value=""></option>
 						</select>
-						<label for="country"><span>Country</span></label>
-						<div class="empty-tooltip">
-							<p>This field can't be empty. Please fill it in.</p>
-						</div>
-					</div>
-					<div class="btn-row">
-						<button onclick="validate()">
+                    <label for="country"><span>Country</span></label>
+                    <div class="empty-tooltip">
+                        <p>This field can't be empty. Please fill it in.</p>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button onclick="validate()">
 							<img src="img/icon/fly.svg" />
 							<span>Submit</span>
 						</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="about" class="inner-container">
-			<div class="about-images">
-				<img src="img/understand-1.jpg" />
-				<img src="img/understand-2.jpg" />
-				<img src="img/understand-3.jpg" />
-			</div>
-			<div class="section-heading">
-				<img src="./img/about.svg" alt="We Understand" />
-			</div>
-			<div class="about-text">
-				<p>
-					Older adults want to play active and meaningful roles in their lives,
-					including as part of a social network, a neighborhood, and a
-					community. Service providers and policymakers must consider that a
-					lack of sense of purpose can become problematic as people age.
-					Engaging them in leisure activities and volunteer work is important.
-					<br /><br />
-					Older adults want to stay active and contribute to society in a
-					reciprocal manner (meaning that they want to exchange their services
-					and skills with others for the mutual benefit of the neighborhood or
-					community). Qualitative and quantitative studies published from 2005
-					to 2016 examining the social needs of older adults were eligible for
-					inclusion. <br /><br />
-					To stimulate social contacts, neighborhood initiatives can be
-					developed. Social meeting places, such as pubs and churches can help
-					to foster the development of close and peripheral relationships.
-					<button>92% Success Rate <img src="img/icon/Arrow.svg" /></button>
-				</p>
-			</div>
-		</section>
-		<section id="carousel-container">
-			<div class="inner-container">
-				<div class="carousel-items no-scrollbar">
-					<div class="item-container">
-						<div class="carousel-item">
-							<img src="img/user.jpg" class="dp" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="inner-container">
+        <div class="about-images">
+            <img src="img/understand-1.jpg" />
+            <img src="img/understand-2.jpg" />
+            <img src="img/understand-3.jpg" />
+        </div>
+        <div class="section-heading">
+            <img src="./img/about.svg" alt="We Understand" />
+        </div>
+        <div class="about-text">
+            <p>
+                Older adults want to play active and meaningful roles in their lives, including as part of a social network, a neighborhood, and a community. Service providers and policymakers must consider that a lack of sense of purpose can become problematic as people
+                age. Engaging them in leisure activities and volunteer work is important.
+                <br /><br /> Older adults want to stay active and contribute to society in a reciprocal manner (meaning that they want to exchange their services and skills with others for the mutual benefit of the neighborhood or community). Qualitative
+                and quantitative studies published from 2005 to 2016 examining the social needs of older adults were eligible for inclusion. <br /><br /> To stimulate social contacts, neighborhood initiatives can be developed. Social meeting places, such
+                as pubs and churches can help to foster the development of close and peripheral relationships.
+                <button>92% Success Rate <img src="img/icon/Arrow.svg" /></button>
+            </p>
+        </div>
+    </section>
+    <section id="carousel-container">
+        <div class="inner-container">
+            <div class="carousel-items no-scrollbar">
+                <div class="item-container">
+                    <div class="carousel-item">
+                        <img src="img/user.jpg" class="dp" />
 
-							<div class="txt">
-								<p class="name">Abbie Harvey</p>
-								<p class="message">
-									I have been caring for my mom & dad off and on for about 10
-									years now, and I know the importance of me being there for
-									appointments. Older people need attention, love and care that
-									they truly deserve.
-								</p>
-								<img class="quote" src="img/icon/quote.svg" />
-							</div>
-						</div>
-					</div>
+                        <div class="txt">
+                            <p class="name">Abbie Harvey</p>
+                            <p class="message">
+                                I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img class="quote" src="img/icon/quote.svg" />
+                        </div>
+                    </div>
+                </div>
 
-					<div class="item-container">
-						<div class="carousel-item">
-							<img src="img/user2.jpg" class="dp" />
+                <div class="item-container">
+                    <div class="carousel-item">
+                        <img src="img/user2.jpg" class="dp" />
 
-							<div class="txt">
-								<p class="name">Tom Hiddleson</p>
-								<p class="message">
-									I have been caring for my mom & dad off and on for about 10
-									years now, and I know the importance of me being there for
-									appointments. Older people need attention, love and care that
-									they truly deserve.
-								</p>
-								<img class="quote" src="img/icon/quote.svg" />
-							</div>
-						</div>
-					</div>
-					<div class="item-container">
-						<div class="carousel-item">
-							<img src="img/user3.jpg" class="dp" />
+                        <div class="txt">
+                            <p class="name">Tom Hiddleson</p>
+                            <p class="message">
+                                I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img class="quote" src="img/icon/quote.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="item-container">
+                    <div class="carousel-item">
+                        <img src="img/user3.jpg" class="dp" />
 
-							<div class="txt">
-								<p class="name">Micheal Jackson</p>
-								<p class="message">
-									I have been caring for my mom & dad off and on for about 10
-									years now, and I know the importance of me being there for
-									appointments. Older people need attention, love and care that
-									they truly deserve.
-								</p>
-								<img class="quote" src="img/icon/quote.svg" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<svg
-					class="prev arrow show-pc"
-					width="48"
-					height="48"
-					viewBox="0 0 48 48"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
+                        <div class="txt">
+                            <p class="name">Micheal Jackson</p>
+                            <p class="message">
+                                I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.
+                            </p>
+                            <img class="quote" src="img/icon/quote.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg class="prev arrow show-pc" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M11.76 8.24L27.52 24L11.76 39.76L16 44L36 24L16 4L11.76 8.24Z"
 						fill="#EAEAEA"
 					/>
 				</svg>
 
-				<svg
-					class="next arrow show-pc"
-					width="48"
-					height="48"
-					viewBox="0 0 48 48"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
+            <svg class="next arrow show-pc" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M11.76 8.24L27.52 24L11.76 39.76L16 44L36 24L16 4L11.76 8.24Z"
 						fill="#EAEAEA"
 					/>
 				</svg>
-				<div class="slide-numbers">
-					<span class="dot active"></span>
-					<span class="dot"></span>
-					<span class="dot"></span>
-				</div>
-			</div>
-		</section>
-		<section id="organize">
-			<div class="inner-container">
-				<div class="section-heading">
-					<img
-						src="./img/organize.svg"
-						alt="WE CAN ORGANIZE EVERYTHING"
-						class="show-pc"
-					/>
-					<img
-						src="./img/organize.svg"
-						alt="WE CAN ORGANIZE EVERYTHING"
-						class="show-tab"
-					/>
-					<img
-						src="./img/organize-mobile.svg"
-						alt="WE CAN ORGANIZE EVERYTHING"
-						class="show-mobile"
-					/>
-				</div>
-				<div class="txt">
-					<p class="itl">
-						<span>Interventions </span> should focus on older adult’s desire for
-						connectedness, participation and independence.
-					</p>
-					<p class="desc">
-						Loneliness and social isolation are growing public health concerns
-						in our aging society. Whilst these experiences occur across the life
-						span, 50% of individuals aged over 60 are at risk of social
-						isolation and one-third will experience some degree of loneliness
-						later in life. It is vital to reduce loneliness and social isolation
-						among older adults.
-						<br /><br />
-						The methodology framework proposed by Asked and O’Malley and further
-						developed by Levac, et al. was used to guide the scoping review
-						process. A total of 33 reviews met the inclusion criteria,
-						evaluating a range of interventions targeted at older people
-						residing in the community or institutionalised settings.
-					</p>
-				</div>
-				<div class="btns">
-					<div class="btn">
-						Needs Assesment<span></span>
+            <div class="slide-numbers">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <section id="organize">
+        <div class="inner-container">
+            <div class="section-heading">
+                <img src="./img/organize.svg" alt="WE CAN ORGANIZE EVERYTHING" class="show-pc" />
+                <img src="./img/organize.svg" alt="WE CAN ORGANIZE EVERYTHING" class="show-tab" />
+                <img src="./img/organize-mobile.svg" alt="WE CAN ORGANIZE EVERYTHING" class="show-mobile" />
+            </div>
+            <div class="txt">
+                <p class="itl">
+                    <span>Interventions </span> should focus on older adult’s desire for connectedness, participation and independence.
+                </p>
+                <p class="desc">
+                    Loneliness and social isolation are growing public health concerns in our aging society. Whilst these experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and one-third will experience some degree of
+                    loneliness later in life. It is vital to reduce loneliness and social isolation among older adults.
+                    <br /><br /> The methodology framework proposed by Asked and O’Malley and further developed by Levac, et al. was used to guide the scoping review process. A total of 33 reviews met the inclusion criteria, evaluating a range of interventions
+                    targeted at older people residing in the community or institutionalised settings.
+                </p>
+            </div>
+            <div class="btns">
+                <div class="btn">
+                    Needs Assesment<span></span>
 
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-					<div class="btn">
-						Treatment Planning &<br />Placement <span></span>
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-					<div class="btn">
-						Transportation & Logistics<span></span>
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-					<div class="btn">
-						Insuarance Advocacy<span></span>
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-					<div class="btn">
-						Employment Advocacy<span></span>
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-					<div class="btn">
-						Aftercare Planning<span></span>
-						<div class="tooltip">
-							<p>
-								We’re experienced in our individual crafts and understand how
-								each one of our roles impacts your plan holistically.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="video-section">
-			<div class="text-wrapper">
-				<div class="text-bg"></div>
-				<div class="text">
-					<div class="section-heading">
-						<img src="./img/video.svg" alt="WATCH THE VIDEO" class="show-pc" />
-						<img src="./img/video.svg" alt="WATCH THE VIDEO" class="show-tab" />
-						<img
-							src="./img/video-mob.svg"
-							alt="WATCH THE VIDEO"
-							class="show-mobile"
-						/>
-					</div>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    Treatment Planning &<br />Placement <span></span>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    Transportation & Logistics<span></span>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    Insuarance Advocacy<span></span>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    Employment Advocacy<span></span>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    Aftercare Planning<span></span>
+                    <div class="tooltip">
+                        <p>
+                            We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video-section">
+        <div class="text-wrapper">
+            <div class="text-bg"></div>
+            <div class="text">
+                <div class="section-heading">
+                    <img src="./img/video.svg" alt="WATCH THE VIDEO" class="show-pc" />
+                    <img src="./img/video.svg" alt="WATCH THE VIDEO" class="show-tab" />
+                    <img src="./img/video-mob.svg" alt="WATCH THE VIDEO" class="show-mobile" />
+                </div>
 
-					<div class="check-box">
-						<img src="img/icon/checkmark.svg" />
-						<p>
-							<span>Needs Assesment</span> The Advocacy Evaluation Toolkit
-							contains the instruments used to collect data for evaluating the
-							Consumer Voices for Coverage program.
-						</p>
-					</div>
-					<div class="check-box">
-						<img src="img/icon/checkmark.svg" />
-						<p>
-							<span>Insuarance Advocacy</span> We are committed to advocating
-							for appropriate coverage and payment policies.
-						</p>
-					</div>
-					<div class="check-box">
-						<img src="img/icon/checkmark.svg" />
-						<p>
-							<span>Treatment Planning & Placement</span> Patients can better
-							understand medical procedures, discharge instructions, etc.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="video" onclick="playPause()">
-				<video id="myVideo" class="bg" width="320" height="240">
+                <div class="check-box">
+                    <img src="img/icon/checkmark.svg" />
+                    <p>
+                        <span>Needs Assesment</span> The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer Voices for Coverage program.
+                    </p>
+                </div>
+                <div class="check-box">
+                    <img src="img/icon/checkmark.svg" />
+                    <p>
+                        <span>Insuarance Advocacy</span> We are committed to advocating for appropriate coverage and payment policies.
+                    </p>
+                </div>
+                <div class="check-box">
+                    <img src="img/icon/checkmark.svg" />
+                    <p>
+                        <span>Treatment Planning & Placement</span> Patients can better understand medical procedures, discharge instructions, etc.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="video" onclick="playPause()">
+            <video id="myVideo" class="bg" width="320" height="240" loop>
 					<source src="video.mp4" type="video/mp4" />
 				</video>
-				<div class="play-wrapper">
-					<span class="play" href="#">
+            <div class="play-wrapper">
+                <span class="play" href="#">
 						<img src="./img/icon/play.svg" alt="play" />
 					</span>
-				</div>
-				<img class="sm-logo" src="img/logo.svg" />
-			</div>
-		</section>
-		<footer>
-			<div class="inner-container">
-				<p>@2021 Get an Intervention Inc. All rights reserved.</p>
-				<ul>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of use</a></li>
-					<li><a href="#">Site Map</a></li>
-				</ul>
-			</div>
-		</footer>
+            </div>
+            <img class="sm-logo" src="img/logo.svg" />
+        </div>
+    </section>
+    <footer>
+        <div class="inner-container">
+            <p>@2021 Get an Intervention Inc. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+    </footer>
 
-		<script src="./main.js"></script>
-	</body>
+    <script src="./main.js"></script>
+</body>
+
 </html>
