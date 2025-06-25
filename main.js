@@ -1,13 +1,19 @@
 // NAVBAR
 const btn = document.querySelector('.nav-opener');
 const navbar = document.querySelector('#nav-items');
-btn.addEventListener('click', () => {
-	const height = '165px';
+const height = '165px';
+const toggleNavbar = (e) => {
+	console.log(e.stopPropagation());
 	if (navbar.style.maxHeight === height) {
 		navbar.style.maxHeight = '0';
 	} else {
 		navbar.style.maxHeight = height;
 	}
+};
+btn.addEventListener('click', toggleNavbar);
+document.body.addEventListener('click', () => {
+	console.log('bod');
+	if (navbar.style.maxHeight === height) navbar.style.maxHeight = '0';
 });
 
 // COUNTRY LIST
