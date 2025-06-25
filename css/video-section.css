@@ -1,0 +1,243 @@
+#video-section {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	.text-wrapper {
+		position: relative;
+		width: 100%;
+		overflow: visible;
+		height: fit-content;
+		* {
+			z-index: 3;
+		}
+		.text-bg {
+			z-index: 1;
+			&::before,
+			&::after {
+				content: '';
+				background-image: url(../img/video-bg.svg);
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				height: 100%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: right;
+				width: calc(100% + 100px);
+				z-index: 3;
+				object-fit: cover;
+				overflow: visible;
+			}
+			&::after {
+				background-image: url(../img/video-bg-2.png);
+				width: calc(100% + 120px);
+				z-index: 2;
+			}
+		}
+		.text {
+			padding: 94px 24px;
+			max-width: 508px;
+			margin: auto;
+			.section-heading {
+				margin-bottom: 48px;
+				line-height: 52px;
+				.show-pc,
+				.show-tab {
+					width: 444px;
+				}
+				&::after {
+					width: 0;
+				}
+			}
+			.check-box {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				column-gap: 24px;
+				margin-bottom: 22px;
+				img {
+					margin-top: 9px;
+				}
+				p {
+					font-weight: 400;
+					font-size: var(--font-md);
+					line-height: 28px;
+					color: rgba(255, 255, 255, 0.8);
+					span {
+						display: block;
+						font-weight: var(--bold);
+						font-size: var(--font-lg);
+						line-height: 32px;
+						margin-bottom: 8px;
+						color: #ffffff;
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		@media (max-width: 985px) {
+			.text {
+				padding-top: 102px;
+				.section-heading {
+					text-align: center;
+					margin-bottom: 64px;
+				}
+				max-width: unset;
+			}
+			.text-bg {
+				&::before,
+				&::after {
+					background-image: url(../img/video-bg-mob.svg);
+					width: 100vw;
+					background-size: cover;
+					background-position: bottom;
+					height: calc(100% + 140px);
+				}
+				&::after {
+					background-image: url(../img/video-bg-mob2.svg);
+					height: calc(100% + 160px);
+				}
+			}
+		}
+		@media (max-width: 610px) {
+			.text-bg {
+				&::before,
+				&::after {
+					height: calc(100% + 85px);
+				}
+				&::after {
+					height: calc(100% + 105px);
+				}
+			}
+			.text {
+				max-width: unset;
+				padding: 80px 16px;
+				.section-heading {
+					margin-bottom: 36px;
+				}
+				.check-box {
+					margin-bottom: 16px;
+					p {
+						font-size: var(--font-sm);
+						line-height: 24px;
+						span {
+							line-height: 24px;
+							font-size: var(--font-md);
+						}
+					}
+				}
+			}
+		}
+	}
+	.video {
+		position: relative;
+		/* z-index: 1; */
+		&::after {
+			content: '';
+			background: rgba(25, 77, 68, 0.3);
+			mix-blend-mode: color;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		.bg {
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+		.play-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 100px;
+			right: 0px;
+			margin: auto;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			height: fit-content;
+			width: fit-content;
+			padding: 23px;
+			border-radius: 50%;
+			border: 1px solid white;
+			background-color: #5bc8af1a;
+			z-index: 4;
+			&:hover {
+				padding: 34px;
+			}
+			&.playing {
+				opacity: 0;
+			}
+			.play {
+				width: 120px;
+				height: 120px;
+				background: rgba(91, 200, 175, 0.8);
+				border: 2px solid #ffffff4d;
+				border-radius: 50%;
+				border: 1px solid white;
+				img {
+					width: 34px;
+					height: 34px;
+					position: absolute;
+					margin: auto;
+					top: 50%;
+					left: 50%;
+					transform: translate(-40%, -50%);
+				}
+			}
+		}
+		.sm-logo {
+			position: absolute;
+			bottom: 33px;
+			right: 72px;
+		}
+		@media (max-width: 985px) {
+			video {
+				min-height: 500px;
+			}
+			.sm-logo {
+				width: 226px;
+				bottom: 49px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.play-wrapper {
+				top: -60%;
+				left: 0;
+				.play {
+					width: 154px;
+					height: 154px;
+					img {
+						height: 50px;
+					}
+				}
+			}
+		}
+		@media (max-width: 610px) {
+			video {
+				min-height: 360px;
+			}
+			.sm-logo {
+				bottom: 24px;
+			}
+			.play-wrapper {
+				top: -65%;
+				.play {
+					width: 98px;
+					height: 98px;
+					img {
+						height: 32px;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 985px) {
+		grid-template-columns: 1fr;
+	}
+}
