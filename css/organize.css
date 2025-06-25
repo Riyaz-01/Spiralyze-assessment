@@ -51,6 +51,7 @@
 			align-items: center;
 			position: relative;
 			overflow: visible;
+			cursor: pointer;
 			span {
 				background-image: url(../img/icon/info.svg);
 				background-size: contain;
@@ -126,6 +127,7 @@
 		}
 	}
 	@media (max-width: 610px) {
+		padding: 85px 0;
 		.txt {
 			row-gap: 40px;
 			.desc {

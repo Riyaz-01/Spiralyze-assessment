@@ -258,9 +258,12 @@ window.addEventListener('load', function () {
 
 function validate() {
 	let errorFlag = false;
-
 	// Get all input elements with class 'inp' inside elements with class 'inp-box'
 	const inputs = document.querySelectorAll('.inp-box .inp');
+
+	inputs.forEach(function (input) {
+		input.parentElement.classList.remove('empty');
+	});
 
 	inputs.forEach(function (input) {
 		if (!input.value && !errorFlag) {
@@ -287,82 +290,79 @@ function validate() {
 }
 
 // CAROUSEL
-var items = document.querySelectorAll('.carousel .item');
-var dots = document.querySelectorAll('.carousel-indicators li');
-var currentItem = 0;
-var isEnabled = true;
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+let items = document.querySelectorAll('.carousel-item');
+let itemsContainer = document.querySelector('.carousel-items');
+let dots = document.querySelectorAll('.dot');
+let totalitems = items.length;
+let itemPosition = 0;
 
-function changeCurrentItem(n) {
-	currentItem = (n + items.length) % items.length;
-}
+// Event Listeners
+next.addEventListener('click', nextitem);
+prev.addEventListener('click', previtem);
+itemsContainer.addEventListener('scroll', updateDot);
 
-function nextItem(n) {
-	hideItem('to-left');
-	changeCurrentItem(n + 1);
-	showItem('from-right');
-}
+// Update Position
+function updatePosition() {
+	//   Images
+	itemsContainer.scrollTo(window.innerWidth * itemPosition, 0);
 
-function previousItem(n) {
-	hideItem('to-right');
-	changeCurrentItem(n - 1);
-	showItem('from-left');
-}
-
-function goToItem(n) {
-	if (n < currentItem) {
-		hideItem('to-right');
-		currentItem = n;
-		showItem('from-left');
-	} else {
-		hideItem('to-left');
-		currentItem = n;
-		showItem('from-right');
+	//   Dots
+	for (let dot of dots) {
+		dot.className = dot.className.replace(' active', '');
 	}
+	dots[itemPosition].classList.add('active');
 }
 
-function hideItem(direction) {
-	isEnabled = false;
-	items[currentItem].classList.add(direction);
-	dots[currentItem].classList.remove('active');
-	items[currentItem].addEventListener('animationend', function () {
-		this.classList.remove('active', direction);
-	});
+let dotUpdateTimeout = null;
+
+function updateDot() {
+	if (dotUpdateTimeout) {
+		clearTimeout(dotUpdateTimeout);
+	}
+	dotUpdateTimeout = setTimeout(() => {
+		const scrollLeft = itemsContainer.scrollLeft;
+		const width = window.innerWidth;
+		let newPosition = Math.round(scrollLeft / width);
+
+		// Clamp to valid range
+		if (newPosition < 0) newPosition = 0;
+		if (newPosition >= totalitems) newPosition = totalitems - 1;
+
+		if (itemPosition !== newPosition) {
+			itemPosition = newPosition;
+			updatePosition();
+		}
+	}, 50);
 }
 
-function showItem(direction) {
-	items[currentItem].classList.add('next', direction);
-	dots[currentItem].classList.add('active');
-	items[currentItem].addEventListener('animationend', function () {
-		this.classList.remove('next', direction);
-		this.classList.add('active');
-		isEnabled = true;
-	});
+// Next item
+function nextitem() {
+	if (itemPosition === totalitems - 1) {
+		itemPosition = 0;
+	} else {
+		itemPosition++;
+	}
+	updatePosition();
+}
+//Previous Image
+function previtem() {
+	if (itemPosition === 0) {
+		itemPosition = totalitems - 1;
+	} else {
+		itemPosition--;
+	}
+	updatePosition();
 }
 
-document
-	.querySelector('.carousel-control.left')
-	.addEventListener('click', function () {
-		if (isEnabled) {
-			previousItem(currentItem);
-		}
+// Dot Position
+dots.forEach((dot, dotPosition) => {
+	dot.addEventListener('click', () => {
+		itemPosition = dotPosition;
+		updatePosition(dotPosition);
 	});
-
-document
-	.querySelector('.carousel-control.right')
-	.addEventListener('click', function () {
-		if (isEnabled) {
-			nextItem(currentItem);
-		}
-	});
-
-document
-	.querySelector('.carousel-indicators')
-	.addEventListener('click', function (e) {
-		var target = [].slice.call(e.target.parentNode.children).indexOf(e.target);
-		if (target !== currentItem && target < dots.length) {
-			goToItem(target);
-		}
-	});
+});
 
 // VIDEO
 function playPause() {

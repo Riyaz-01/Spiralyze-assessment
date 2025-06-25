@@ -37,6 +37,7 @@
 			border: 2px solid var(--light-green);
 			border-radius: 4px;
 			margin-top: 10px;
+			box-shadow: 0px 4px 6px 0px #00000014;
 		}
 	}
 	@media (max-width: 985px) {
