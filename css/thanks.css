@@ -1,0 +1,381 @@
+:root {
+	--light-green: #5bc8af;
+	--medium-green: #297c6b;
+	--dark-green: #194d44;
+	--black: #333333;
+	--grey: #eaeaea;
+	--red: #ff7777;
+	--font-xs: 13px;
+	--font-sm: 14px;
+	--font-md: 18px;
+	--font-lg: 24px;
+	--font-xl: 28px;
+	--light: 400;
+	--bold: 700;
+	--xbold: 800;
+	--width-tab: 985px;
+	--width-mobile: 610px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(
+		135deg,
+		var(--light-green) 0%,
+		var(--medium-green) 100%
+	);
+	min-height: 100vh;
+	overflow-x: hidden;
+	position: relative;
+}
+
+/* Animated background shapes */
+
+.bg-shape {
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.1;
+	animation: float 6s ease-in-out infinite;
+}
+
+.bg-shape-1 {
+	width: 300px;
+	height: 300px;
+	background: var(--dark-green);
+	top: 10%;
+	left: -5%;
+	animation-delay: 0s;
+}
+
+.bg-shape-2 {
+	width: 200px;
+	height: 200px;
+	background: var(--grey);
+	top: 60%;
+	right: -5%;
+	animation-delay: 2s;
+}
+
+.bg-shape-3 {
+	width: 150px;
+	height: 150px;
+	background: var(--dark-green);
+	top: 30%;
+	right: 20%;
+	animation-delay: 4s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-20px) rotate(180deg);
+	}
+}
+
+/* Main container */
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	position: relative;
+	z-index: 2;
+}
+
+/* Thank you card */
+
+.thank-you-card {
+	background: white;
+	border-radius: 24px;
+	padding: 4rem 3rem;
+	text-align: center;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Decorative top curve */
+
+/* Decorative top curve */
+
+.card-decoration {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 120px;
+	background: var(--medium-green);
+	clip-path: ellipse(55% 80% at 50% 0%);
+	/* animation: shimmer 3s ease-in-out infinite; */
+}
+
+@keyframes shimmer {
+	0%,
+	100% {
+		background: linear-gradient(
+			135deg,
+			var(--light-green),
+			var(--medium-green)
+		);
+	}
+	50% {
+		background: linear-gradient(135deg, var(--medium-green), var(--dark-green));
+	}
+}
+
+/* Success icon */
+
+.success-icon {
+	width: 80px;
+	height: 80px;
+	background: var(--light-green);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 2rem;
+	animation: pulse 2s ease-in-out infinite;
+	position: relative;
+	z-index: 3;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(91, 200, 175, 0.4);
+	}
+	50% {
+		transform: scale(1.05);
+		box-shadow: 0 0 0 15px rgba(91, 200, 175, 0);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(91, 200, 175, 0);
+	}
+}
+
+.checkmark {
+	width: 30px;
+	height: 30px;
+	position: relative;
+}
+
+.checkmark::after {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 4px;
+	width: 8px;
+	height: 16px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+	animation: checkmark 0.6s ease-in-out 0.4s both;
+}
+
+@keyframes checkmark {
+	from {
+		opacity: 0;
+		transform: rotate(45deg) scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: rotate(45deg) scale(1);
+	}
+}
+
+/* Typography */
+
+.main-title {
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: var(--xbold);
+	color: var(--dark-green);
+	margin-bottom: 1rem;
+	animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.subtitle {
+	font-size: var(--font-lg);
+	color: var(--medium-green);
+	margin-bottom: 2rem;
+	font-weight: var(--light);
+	animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.message {
+	font-size: var(--font-md);
+	color: var(--black);
+	line-height: 1.6;
+	margin-bottom: 3rem;
+	animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Action buttons */
+
+.actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.btn {
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 50px;
+	font-size: var(--font-md);
+	font-weight: var(--bold);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-primary {
+	background: linear-gradient(135deg, var(--light-green), var(--medium-green));
+	color: white;
+}
+
+.btn-primary:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 25px rgba(91, 200, 175, 0.3);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--medium-green);
+	border: 2px solid var(--light-green);
+}
+
+.btn-secondary:hover {
+	background: var(--light-green);
+	color: white;
+	transform: translateY(-3px);
+}
+
+/* Floating particles */
+
+.particle {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background: var(--light-green);
+	border-radius: 50%;
+	opacity: 0.6;
+	animation: particle-float 4s linear infinite;
+}
+
+.particle:nth-child(1) {
+	left: 20%;
+	animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+	left: 40%;
+	animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+	left: 60%;
+	animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+	left: 80%;
+	animation-delay: 3s;
+}
+
+@keyframes particle-float {
+	0% {
+		transform: translateY(100vh) rotate(0deg);
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.6;
+	}
+	90% {
+		opacity: 0.6;
+	}
+	100% {
+		transform: translateY(-100px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* Bottom decorative wave */
+
+.bottom-wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	background: var(--dark-green);
+	clip-path: polygon(
+		0 100%,
+		100% 100%,
+		100% 40%,
+		80% 50%,
+		60% 35%,
+		40% 50%,
+		20% 35%,
+		0 50%
+	);
+	opacity: 0.1;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+	.thank-you-card {
+		padding: 3rem 2rem;
+		margin: 1rem;
+	}
+	.actions {
+		flex-direction: column;
+		align-items: center;
+	}
+	.btn {
+		width: 100%;
+		max-width: 280px;
+	}
+}
