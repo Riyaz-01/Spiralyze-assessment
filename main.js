@@ -347,7 +347,7 @@ function updateDot() {
 			itemPosition = newPosition;
 			updatePosition();
 		}
-	}, 50);
+	}, 100);
 }
 
 // Next item
