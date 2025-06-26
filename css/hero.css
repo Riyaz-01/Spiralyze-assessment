@@ -139,8 +139,8 @@
 				.active {
 					text-decoration: none;
 				}
-				max-height: 0;
-				transition: max-height 300ms ease-in-out;
+				height: 0;
+				transition: 200ms ease-out;
 			}
 		}
 	}

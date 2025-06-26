@@ -4,15 +4,15 @@ const navbar = document.querySelector('#nav-items');
 const height = '165px';
 const toggleNavbar = (e) => {
 	console.log(e.stopPropagation());
-	if (navbar.style.maxHeight === height) {
-		navbar.style.maxHeight = '0';
+	if (navbar.style.height === height) {
+		navbar.style.height = '0';
 	} else {
-		navbar.style.maxHeight = height;
+		navbar.style.height = height;
 	}
 };
 btn.addEventListener('click', toggleNavbar);
 document.body.addEventListener('click', () => {
-	if (navbar.style.maxHeight === height) navbar.style.maxHeight = '0';
+	if (navbar.style.height === height) navbar.style.height = '0';
 });
 
 // COUNTRY LIST
