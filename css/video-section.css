@@ -203,8 +203,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: var(--dark-green);
-            padding: 2px;
+            /* background-color: var(--dark-green); */
+            /* padding: 2px; */
             border-radius: 4px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
