@@ -295,11 +295,15 @@
                 </div>
             </div>
         </div>
-        <div class="video" onclick="playPause()">
+        <div class="video">
             <div class="video-thumb-wrapper"></div>
-            <!-- <video id="myVideo" class="bg" width="320" height="240" loop> -->
-            <source src="video.mp4" type="video/mp4" />
-            </video>
+            <div id="videoPopup1" class="popup">
+                <div class="popup-content">
+                    <span class="close" id="close">×</span>
+                    <video src="video.mp4" allowfullscreen id="myVideo" loop></video>
+                </div>
+            </div>
+
             <div class="play-wrapper">
                 <span class="play" href="#">
 						<img src="./img/icon/play.svg" alt="play" />
