@@ -319,7 +319,7 @@ itemsContainer.addEventListener('scroll', updateDot);
 // Update Position
 function updatePosition() {
 	//   Images
-	itemsContainer.scrollTo(window.innerWidth * itemPosition, 0);
+	itemsContainer.scrollTo(window.innerWidth * itemPosition + 50, 0);
 
 	//   Dots
 	for (let dot of dots) {
