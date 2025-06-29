@@ -2,7 +2,7 @@
     position: relative;
     z-index: 2;
     background-color: white;
-    --container-height: 319px;
+    --container-height: 316px;
     .inner-container {
         padding-top: var(--container-height);
         position: relative;
@@ -35,8 +35,8 @@
                 .txt {
                     position: relative;
                     background-color: var(--dark-green);
-                    padding: 0 65px;
-                    padding-top: 62px;
+                    padding: 0 62px;
+                    padding-top: 58px;
                     box-shadow: 0px 10px 30px 0px #0000001f;
                     border-top-right-radius: 12px;
                     border-bottom-right-radius: 12px;
@@ -118,11 +118,11 @@
                 .carousel-item {
                     gap: 26px;
                     .dp {
-                        width: 196px;
-                        height: 196px;
+                        width: 198px;
+                        height: 198px;
                     }
                     .txt {
-                        padding: 33px 37px;
+                        padding: 31px 37px;
                         .name {
                             font-size: var(--font-md);
                             line-height: 24px;
