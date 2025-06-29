@@ -310,6 +310,9 @@
                     }
                 }
             }
+            .video-thumb-wrapper {
+                background-position-y: 15px;
+            }
         }
     }
     @media (max-width: 1046px) {
